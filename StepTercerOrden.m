@@ -3,9 +3,13 @@ cla('reset')
 datos = csvread("TercerOrden.dat",1,0);
 t=(datos(:,1))';
 v=(datos(:,2))';
-plot(t,v);hold on;
+plot(t,v,'--b');hold on;
 dem=[1 3000 3e6 2e9];
 num=2e9;
 h=tf(num,dem);
-step(h);
+step(h,'r');
+grid on;
+legend('Simulacion Proteus','Simulacion MatLab')
+legend('Location','northeastoutside')
+legend('boxoff')
 grid on;
