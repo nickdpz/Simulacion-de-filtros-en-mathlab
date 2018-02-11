@@ -2,6 +2,10 @@ fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','whi
 cla('reset')
 zi=0.5;
 wn1=1000;
+datos = csvread("SegundoOrden1.dat",1,0);
+t=(datos(:,1))';
+v=(datos(:,2))';
+plot(t,v);hold on;
 dem=[1 2*zi*wn1 wn1^2];
 num=wn1^2;
 h=tf(num,dem);
