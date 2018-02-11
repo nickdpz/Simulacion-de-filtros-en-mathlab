@@ -2,7 +2,7 @@ fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','whi
 cla('reset')
 datos = csvread("QuintoOrden.dat",1,0);
 t=(datos(:,1))';
-v=(datos(:,2)/2)';
+v=(datos(:,2))';
 plot(t,v);hold on;
 dem=[1 7200 24.6e6 41.6e9 35.4e12 18e15];
 num=18e15;
