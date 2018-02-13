@@ -2,16 +2,23 @@ fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','whi
 cla('reset')
 T=1/2000;
 datos = csvread("PrimerOrden1.dat",1,0);
+datose = csvread("PrimerOrdenp.csv",2,0);
+te=(datose(:,1)');
+ve=(datose(:,2)'/2);
 t=(datos(:,1))';
 v=(datos(:,2))';
-plot(t,v,'--b');
+plot(t,v,'Square','Color','red');
+hold on;
+plot(te,ve,'-','Color','black');
 hold on;
 dem=[T 1];
 num=1;
 h=tf(num,dem);
-step(h,'r');
+step(h,'--blue');
 grid on;
-legend('Simulacion Proteus','Simulacion MatLab')
+legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
+ax = gca;
+
 grid on;
