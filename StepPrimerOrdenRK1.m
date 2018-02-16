@@ -1,21 +1,20 @@
 fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','white','position',[250 200 850 400]);       
 cla('reset')
-datos = csvread("QuintoOrden.dat",1,0);
+T=1/2000;
+datos = csvread("DatosSimulacionProteus/PrimerOrdenRK1.dat",1,0);
+datose = csvread("DatosExperimentales/PrimerOrdenRp.csv",2,0);
 t=(datos(:,1))';
 v=(datos(:,2))';
-datose = csvread("QuintoOrdenp.csv",2,0);
 te=(datose(:,1)');
-ve=(datose(:,2)'/2);
+ve=(datose(:,2)');
 plot(t,v,'Square','Color','red');
 hold on;
 plot(te,ve,'-','Color','black');
-hold on;
-dem=[1 7200 24.6e6 41.6e9 35.4e12 18e15];
-num=18e15;
-h=tf(num,dem);
-step(h,'--blue');
+%hold on;
+%plot(datosmatlab(:,1),datosmatlab(:,2),'--blue');
 grid on;
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
-grid on;
+ax = gca;
+ax.YLim = [0 1.1]; 

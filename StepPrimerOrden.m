@@ -1,8 +1,8 @@
 fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','white','position',[250 200 850 400]);       
 cla('reset')
 T=1/2000;
-datos = csvread("PrimerOrden1.dat",1,0);
-datose = csvread("PrimerOrdenp.csv",2,0);
+datos = csvread("DatosSimulacionProteus/PrimerOrden1.dat",1,0);
+datose = csvread("DatosExperimentales/PrimerOrdenp.csv",2,0);
 te=(datose(:,1)');
 ve=(datose(:,2)'/2);
 t=(datos(:,1))';
