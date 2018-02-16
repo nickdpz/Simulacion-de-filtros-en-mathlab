@@ -20,4 +20,6 @@ grid on;
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
+wd=wn1*sqrt(1-zi^2);
+tp=pi/wd
 grid on;

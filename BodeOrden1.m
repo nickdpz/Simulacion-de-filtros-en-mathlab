@@ -6,3 +6,4 @@ num=1;
 h=tf(num,dem);
 bode(h);
 grid on;
+%hola
