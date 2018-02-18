@@ -1,17 +1,19 @@
 fig=figure('Name','Autor Nicolas David Pastran','NumberTitle','off','Color','white','position',[250 200 850 400]);       
 cla('reset')
-T=1/2000;
-%datos = csvread("DatosSimulacionProteus/SegundoOrden2RealimentadoK1.dat",1,0);
+clear;
+clc;
+datos = csvread("DatosSimulacionProteus/SegundoOrden2R.dat",1,0);
 datose = csvread("DatosExperimentales/SegundoOrden2Rp.csv",2,0);
-%t=(datos(:,1))';
-%v=(datos(:,2))';
-%te=(datose(:,1)');
-%ve=(datose(:,2)'/2);
-%plot(t,v,'Square','Color','red');
-%hold on;
+t=(datos(:,1))';
+v=(datos(:,2))';
+te=(datose(:,1)');
+ve=(datose(:,2)');
+plot(t,v,'Square','Color','red');
+hold on;
 plot(te,ve,'-','Color','black');
-%hold on;
-%plot(datosmatlab(:,1),datosmatlab(:,2),'--blue');
+hold on;
+load('SimulacionesSimulink/RealimentadoSegundoOrden2.mat')
+plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
