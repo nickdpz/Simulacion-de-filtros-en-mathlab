@@ -15,8 +15,10 @@ hold on;
 load('SimulacionesSimulink/RealimentadoPrimerOrden.mat')
 plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
+title('Filtro Primer Orden Lazo Cerrado K=1');
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
 ax = gca;
 ax.YLim = [0 1.1]; 
+ax.XLim = [0, 5e-3]; 

@@ -19,4 +19,5 @@ legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
 ax = gca;
-ax.YLim = [0 1.75]; 
+ax.YLim = [0 1.75];
+ax.XLim = [0 20e-3];

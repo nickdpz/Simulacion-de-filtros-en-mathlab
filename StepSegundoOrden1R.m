@@ -15,6 +15,7 @@ hold on;
 load('SimulacionesSimulink/RealimentadoSegundoOrden1.mat')
 plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
+title('Filtro Segundo Orden #1 Lazo Cerrado K=1');
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','northeastoutside')
 legend('boxoff')
