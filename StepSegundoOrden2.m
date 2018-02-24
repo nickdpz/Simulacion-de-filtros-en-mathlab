@@ -17,7 +17,7 @@ plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
 title('Filtro Segundo Orden #2');
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
-legend('Location','northeastoutside')
+legend('Location','southeast')
 legend('boxoff')
 ax = gca;
 ax.XLim = [0, 5e-3]; 

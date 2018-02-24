@@ -16,7 +16,7 @@ load('SimulacionesSimulink/RealimentadoQuintoOrden.mat')
 plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
-legend('Location','northeastoutside')
+legend('Location','southeast')
 legend('boxoff')
 ax = gca;
 ax.YLim = [0 1.75];

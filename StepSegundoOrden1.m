@@ -18,11 +18,13 @@ grid on;
 title('Filtro Segundo Orden #1');
 grid on;
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
-legend('Location','northeastoutside')
+legend('Location','southeast')
 legend('boxoff')
 ax = gca;
 ax.XLim = [0, 25e-3]; 
 ax.YLim = [0 2.5]; 
 wd=wn1*sqrt(1-zi^2);
+Mp=exp((-pi*zi)/sqrt(1-zi^2))
+ov=2+2*Mp
 tp=pi/wd
 grid on;
