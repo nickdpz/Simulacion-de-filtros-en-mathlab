@@ -17,7 +17,7 @@ plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
 title('Filtro Tercer Orden Lazo Cerrado K=1');
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
-legend('Location','northeastoutside')
+legend('Location','southeast')
 legend('boxoff')
 ax = gca;
 ax.YLim = [0 1.75]; 
