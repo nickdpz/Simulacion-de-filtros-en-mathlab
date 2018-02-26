@@ -15,9 +15,10 @@ hold on;
 load('SimulacionesSimulink/RealimentadoQuintoOrden.mat')
 plot(datosmatlab(1,:),datosmatlab(2,:),'--blue');
 grid on;
+title('Filtro Quinto Orden Lazo Cerrado K=1');
 legend('Simulacion Proteus','Datos Reales','Simulacion MatLab')
 legend('Location','southeast')
 legend('boxoff')
 ax = gca;
-%ax.YLim = [0 1.75];
+ax.XLim = [0 3e-2];
 %ax.XLim = [0 20e-3];
