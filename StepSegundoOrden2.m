@@ -24,4 +24,6 @@ ax.XLim = [0, 5e-3];
 ax.YLim = [0 2.25]; 
 grid on;
 wd=wn1*sqrt(1-zi^2);
+Mp=exp((-pi*zi)/sqrt(1-zi^2))
+ov=2+2*Mp
 tp=pi/wd
