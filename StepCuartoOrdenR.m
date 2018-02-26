@@ -3,7 +3,7 @@ cla('reset')
 clear;
 clc;
 datos = csvread("DatosSimulacionProteus/CuartoOrdenR.dat",1,0);
-datose = csvread("DatosExperimentales/CuartoOrdenRp.csv",2,0);
+datose = csvread("DatosExperimentales/CuartoOrdenRp2.csv",2,0);
 t=(datos(:,1))';
 v=(datos(:,2))';
 te=(datose(:,1)');
